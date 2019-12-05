@@ -48,6 +48,12 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(git colorize common-aliases)
 
 #######################################################33
+# alias
+alias cd..="cd .."
+alias .2="cd ../.."
+alias .3="cd ../../.."
+alias brewup="brew upgrade"
+
 # User configuration
 
 # Setup OMZ and relatives
@@ -56,7 +62,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Sanity
-DEFAULT_USER="sv"
+DEFAULT_USER="tja"
 export LC_ALL="en_US.UTF-8"
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$PATH"
 ulimit -S -n 10000

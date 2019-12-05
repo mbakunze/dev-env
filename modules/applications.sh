@@ -41,7 +41,7 @@ install_base() {
 
 install_apps() {
     echo "Installing: base apps"
-    BASE_APPS="google-chrome moom slack visual-studio-code"
+    BASE_APPS="google-chrome spectacle slack visual-studio-code"
     brew cask install $BASE_APPS
 
     echo "Installing: docker edge"
