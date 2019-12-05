@@ -10,6 +10,14 @@ configure_python() {
 
     echo "Installing poetry"
     curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+
+    echo "Install pip packages"
+    PIP="ipython pandas numpy sklearn" 
+    pip install $PIP
+}
+
+configure_r(){
+    R -e 'install.packages(c("parallel","dpyr","ggplot2","data.table","devtools","forecast","caret","shiny","zoo","ISOweek","Rcpp","testthat"), repos="http://cran.rstudio.com")'
 }
 
 install_base() {
@@ -22,6 +30,11 @@ install_base() {
     brew install $PYTHON
     configure_python
     
+    echo "Installing: R"
+    brew install r
+    brew cask install rstudio
+    configure_r
+
     echo "Installing: other languages"
     LANGUAGES="go node ruby java"
     brew install $LANGUAGES
@@ -37,11 +50,16 @@ install_base() {
     echo "Installing: azure"
     AZURE="git-crypt mssql-tools azure-cli"
     brew install $AZURE
+
+    echo "Installing: DS tools"
+    DSTOOLS="jupyter apache-spark"
+    brew cask install homebrew/cask-versions/adoptopenjdk8 #java8 needed for spark
+    brew install $DSTOOLS
 }
 
 install_apps() {
     echo "Installing: base apps"
-    BASE_APPS="google-chrome spectacle slack visual-studio-code"
+    BASE_APPS="google-chrome spectacle slack visual-studio-code iterm2 evernote"
     brew cask install $BASE_APPS
 
     echo "Installing: docker edge"
