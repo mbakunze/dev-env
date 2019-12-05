@@ -30,6 +30,9 @@ config_macos_settings() {
     #Show indicator lights for open applications in the Dock
     defaults write com.apple.dock show-process-indicators -bool true
 
+    #Show recent items stack
+    defaults write com.apple.dock persistent-others -array-add '{"tile-data" = {"list-type" = 1;}; "tile-type" = "recents-tile";}'
+
     #Enable AirDrop over Ethernet and on unsupported Macs running Lion
     defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
