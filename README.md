@@ -1,9 +1,7 @@
 # dev-env
 
-My standard MacOS Development Environment.
+My standard MacOS Development Environment: `bash install.sh`
 
-Basic environment is set up in an automated way. There is a manual step remaining (setting the correct font/color combination in the terminal).
-
-In order to run just do `bash install.sh`
-
-
+Manual steps needed:
+- lastpass
+- .kube/config

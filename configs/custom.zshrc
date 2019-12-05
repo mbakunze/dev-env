@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -53,6 +53,7 @@ alias cd..="cd .."
 alias .2="cd ../.."
 alias .3="cd ../../.."
 alias brewup="brew upgrade"
+alias rstudio="open -a RStudio"
 
 # User configuration
 
@@ -75,3 +76,10 @@ source $HOME/.poetry/env
 
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+# Pyspark (`pyspark` will now start a notebook with spark backend)
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
