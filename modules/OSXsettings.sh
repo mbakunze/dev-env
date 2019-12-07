@@ -44,4 +44,22 @@ config_macos_settings() {
 
     #Show the ~/Library folder
     chflags nohidden ~/Library
+
+    #Show battery percentage in menu bar
+    defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+    #Show date in in menu bar
+    defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM h:mm a"
+     
+    # Dock magnification
+    defaults write com.apple.dock magnification -bool true
+
+    # Icon size of Dock items
+    defaults write com.apple.dock tilesize -int 40
+
+    # Icon size of magnified Dock items
+    defaults write com.apple.dock largesize -int 75
+
+    # Automatically hide and show the Dock
+    defaults write com.apple.dock autohide -bool true
 }

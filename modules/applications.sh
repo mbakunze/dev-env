@@ -12,7 +12,8 @@ configure_python() {
     curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
 
     echo "Install pip packages"
-    PIP="ipython pandas numpy sklearn" 
+    PIP="pipenv ipython pandas numpy sklearn" 
+    pip install --upgrade pip
     pip install $PIP
 }
 
