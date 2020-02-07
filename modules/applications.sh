@@ -37,8 +37,9 @@ install_base() {
     configure_r
 
     echo "Installing: other languages"
-    LANGUAGES="go node ruby java"
+    LANGUAGES="go node ruby octave"
     brew install $LANGUAGES
+    brew cask install java
     
     echo "Installing: kubernetes"
     KUBERNETES="kubernetes-cli kubectx kustomize"
@@ -49,13 +50,14 @@ install_base() {
     brew install $DEVHELPERS
 
     echo "Installing: azure"
-    AZURE="git-crypt mssql-tools azure-cli"
+    AZURE="git-crypt azure-cli"
     brew install $AZURE
 
     echo "Installing: DS tools"
     DSTOOLS="jupyter apache-spark"
     brew cask install homebrew/cask-versions/adoptopenjdk8 #java8 needed for spark
     brew install $DSTOOLS
+    pip install jupyter-contrib-nbextensions
 }
 
 install_apps() {
@@ -68,6 +70,6 @@ install_apps() {
     brew cask install docker-edge
 
     echo "Installing: corporate"
-    CORPORATE="microsoft-office jetbrains-toolbox keybase microsoft-azure-storage-explorer"
+    CORPORATE="microsoft-office jetbrains-toolbox keybase microsoft-azure-storage-explorer dbeaver-community"
     brew cask install $CORPORATE
 }

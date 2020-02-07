@@ -54,6 +54,8 @@ alias .2="cd ../.."
 alias .3="cd ../../.."
 alias brewup="brew upgrade"
 alias rstudio="open -a RStudio"
+alias klogs="kubectl logs"
+alias kgpods="kubectl get pods"
 
 # User configuration
 

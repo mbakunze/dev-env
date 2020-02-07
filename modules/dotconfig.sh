@@ -19,4 +19,5 @@ install_configs() {
     _setup_config custom.ssh.config ~/.ssh/config
     _setup_config custom.gitconfig ~/.gitconfig
     _setup_config custom.gitignore_global ~/.gitignore_global
+    _setup_config custom.spectacle.Shortcuts.json ~/Library/Application\ Support/Spectacle/Shortcuts.json
 }
