@@ -62,7 +62,7 @@ install_base() {
 
 install_apps() {
     echo "Installing: base apps"
-    BASE_APPS="google-chrome spectacle slack visual-studio-code iterm2 evernote"
+    BASE_APPS="google-chrome spectacle slack visual-studio-code iterm2" #removed evernote
     brew cask install $BASE_APPS
 
     echo "Installing: docker edge"
