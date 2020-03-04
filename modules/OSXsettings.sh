@@ -2,15 +2,6 @@
 
 config_macos_settings() {
     echo "Configuring OS"
-    
-    #Enable repeat on keydown
-    defaults write -g ApplePressAndHoldEnabled -bool false
-
-    #Set a blazingly fast keyboard repeat rate
-    defaults write NSGlobalDomain KeyRepeat -int 1
-
-    #Set a shorter Delay until key repeat
-    defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
     #Enable Trackpad touch to click
     defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
