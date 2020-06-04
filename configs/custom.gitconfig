@@ -1,8 +1,8 @@
 [user]
   # TODO: Support for custom user by doing: 
   # https://stackoverflow.com/questions/4220416/can-i-specify-multiple-users-for-myself-in-gitconfig/43654115#43654115
-  name = TrineJA
-  email = trinejulie@gmail.com
+  name = MichaBAKunze
+  email = mbakunze@gmail.com
 [push]
   default = simple
 
