@@ -28,3 +28,9 @@ graphics_toolkit("gnuplot")` to ~/.octave file
 to run the program, there is an issue with the signature of the current app
 - ran into an issue when running the script the first time due to some permission error
 when installing oh-my-zsh. Needed to implemented the stated workaround and run the script again.
+
+- font smoothing needs to be enabled when not working on 4K monitor, try:
+```
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+defaults -currentHost write -globalDomain AppleFontSmoothing -int 2
+```
